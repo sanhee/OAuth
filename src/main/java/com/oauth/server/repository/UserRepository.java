@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 
+// IoC가 아닌 직접 구현했을 경우
 @Repository
 public class UserRepository {
 

@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 // 중복을 감안하고 가독성과 유지보수를 위해 GitHubIosSevice, GitHubWebSevice로 분리하기 위해서임.
 
 @Service
-public class GitHubSpringService extends GitHubService{
-    @Value("${GITHUB.CLIENT.ID}")
+public class GitHubIosService extends GitHubService{
+    @Value("${GITHUB.IOS.CLIENT.ID}")
     private String CLIENT_ID;
 
-    @Value("${GITHUB.CLIENT.SECRET}")
+    @Value("${GITHUB.IOS.CLIENT.SECRET}")
     private String CLIENT_SECRET;
 
     @Override
