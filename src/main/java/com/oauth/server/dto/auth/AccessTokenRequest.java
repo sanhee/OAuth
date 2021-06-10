@@ -1,5 +1,7 @@
 package com.oauth.server.dto.auth;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
+
 public class AccessTokenRequest {
     private final String clientId;
     private final String clientSecret;
@@ -11,14 +13,18 @@ public class AccessTokenRequest {
         this.code = code;
     }
 
+    @JsonGetter("client_id")
     public String getClientId() {
         return clientId;
     }
 
+
+    @JsonGetter("client_secret")
     public String getClientSecret() {
         return clientSecret;
     }
 
+    @JsonGetter("code")
     public String getCode() {
         return code;
     }

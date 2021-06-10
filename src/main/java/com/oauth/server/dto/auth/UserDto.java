@@ -1,5 +1,7 @@
 package com.oauth.server.dto.auth;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonSetter;
 import com.oauth.server.domain.auth.User;
 
 public class UserDto {
@@ -15,18 +17,22 @@ public class UserDto {
         this.name = name;
     }
 
+    @JsonGetter("login")
     public String getLogin() {
         return login;
     }
 
+    @JsonGetter("name")
     public String getName() {
         return name;
     }
 
+    @JsonSetter("login")
     public void setLogin(String login) {
         this.login = login;
     }
 
+    @JsonSetter("name")
     public void setName(String name) {
         this.name = name;
     }
